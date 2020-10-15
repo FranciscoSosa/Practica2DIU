@@ -114,7 +114,7 @@ public class Converter extends javax.swing.JFrame {
         String format = item.equals("euro") ? " EUR = %.2f USD" : " USD = %.2f EUR";
         String text = inputField.getText();
         if(text.length() > 0){
-            //"\\d+[.][.]?\\d*" expresión regular para comprobar que text sea un número con o sin decimales.
+            //"\\d+[.]?\\d*" expresión regular para comprobar que text sea un número con o sin decimales.
             if(text.matches("\\d+[.]?\\d*")){
                 double data = Double.parseDouble(text) * rate;
                 outputLabel.setText(String.format(text + format, data));

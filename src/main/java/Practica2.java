@@ -74,7 +74,7 @@ public class Practica2 extends javax.swing.JFrame {
     private void confirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmButtonActionPerformed
         String text = inputField.getText();
         if(text.length() > 0){
-            //"[1-9]\\d*[.]?\\d*" expresión regular para comprobar que text sea un número con o sin decimales.
+            //"d+[.]?\\d*" expresión regular para comprobar que text sea un número con o sin decimales.
             if(text.matches("\\d+[.]?\\d*")){
                 Converter c = new Converter(Double.parseDouble(inputField.getText()));
                 c.setVisible(true);
@@ -116,7 +116,6 @@ public class Practica2 extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(Practica2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
